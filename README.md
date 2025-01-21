@@ -20,7 +20,7 @@ Antes de seguir los pasos en este manual, asegúrate de cumplir con los siguient
 
 ## ¿Dónde puedes consultar los pasos detallados?
 
-Puedes consultar el manual completo y seguir los pasos detallados para cada plataforma accediendo a la página de **[Guía para Publicar Apps en las Tiendas de Aplicaciones](enlace_a_tu_pagina_de_github_pages)**. Ahí encontrarás todas las instrucciones organizadas por plataforma (Android, Huawei, Apple).
+Puedes consultar el manual completo y seguir los pasos detallados para cada plataforma accediendo a la página de **[Guía para Publicar Apps en las Tiendas de Aplicaciones](https://corporacioncaest.github.io/manual-publicacion-efast-app/)**. Ahí encontrarás todas las instrucciones organizadas por plataforma (Android, Huawei, Apple).
 
 ---
 
