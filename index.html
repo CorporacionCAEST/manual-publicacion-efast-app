@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para Publicar Apps</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #002856;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            width: 100px; /* Tamaño de la imagen */
+            height: auto;
+            margin-right: 15px; /* Espacio entre la imagen y el título */
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+         h2 {
+            color: #34495e;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .step h3 {
+            color: #2ecc71;
+        }
+
+        .step p {
+            margin: 10px 0;
+            color: #7f8c8d;
+        }
+
+        .step code {
+            background-color: #f4f4f4;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        footer {
+            background-color: #002856;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://www.efastonline.com/assets/images/efast/Logo-E-Fast.png" alt="Logo">
+    <h1>Guía para Publicar la app en las Tiendas de Aplicaciones</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Android</h2>
+
+        <div class="step">
+            <h3>1. Crear el Release</h3>
+            <p>Ejecuta el siguiente comando para crear el archivo de release de la app:</p>
+            <code>ionic cordova build android --release</code>
+            <p>El archivo APK se generará en la siguiente ruta:</p>
+            <code>C:\Users\username\Documents\proyectos\app-EFAST\app\platforms\android\app\build\outputs\apk\release</code>
+        </div>
+
+        <div class="step">
+            <h3>2. Firmar la App</h3>
+            <p>Elimina el archivo APK generado, reemplaza el archivo <strong>build-efast.ps1</strong> que se encuentra en la carpeta <strong>app</strong> con el archivo que está en la carpeta de <strong>proyectos</strong>, y ejecuta el siguiente comando:</p>
+            <code>.\build-efast.ps1</code>
+        </div>
+
+        <div class="step">
+            <h3>3. Subir la App a Google Play Store</h3>
+            <p>Ingresa a la consola de Google Play Store: <a href="https://play.google.com/console/u/0/developers" target="_blank">Google Developer</a></p>
+            <ol>
+                <li>Haz clic en <strong>Probar y Publicar</strong>.</li>
+                <li>Selecciona <strong>Producción</strong>.</li>
+                <li>Haz clic en <strong>Crear nueva versión</strong>.</li>
+                <li>Arrastra o agrega la versión firmada del paso anterior.</li>
+                <li>Haz clic en <strong>Copiar notas de una versión anterior</strong>.</li>
+                <li>Haz clic en <strong>Siguiente</strong> y agrega un 100% de lanzamiento.</li>
+                <li>Haz clic en <strong>Guardar</strong>.</li>
+                <li>Haz clic en <strong>Resumen</strong> y luego en <strong>Enviar 1 cambio a revisión</strong>.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h2>Huawei</h2>
+
+        <div class="step">
+            <h3>1. Acceder a la Plataforma de Huawei</h3>
+            <p>Ingresa a <a href="https://developer.huawei.com/consumer/en/service/josp/agc/index.html#/myApp/101754587/9322385623857555199" target="_blank">Huawei Developer Console</a>.</p>
+        </div>
+
+        <div class="step">
+            <h3>2. Actualizar la Aplicación</h3>
+            <p>Haz clic en <strong>Update</strong>.</p>
+        </div>
+
+        <div class="step">
+            <h3>3. Selección de Países</h3>
+            <p>En <strong>Country</strong>, selecciona la opción de <strong>Countries selected</strong> y elimina <strong>China</strong>. Luego haz clic en <strong>Save</strong>.</p>
+        </div>
+
+        <div class="step">
+            <h3>4. Subir la Nueva Versión</h3>
+            <p>En la sección <strong>Manage Package</strong>, haz clic en <strong>Upload</strong>, selecciona la versión firmada y súbela.</p>
+            <p>Haz clic en <strong>Save</strong> y luego en <strong>Submit</strong>.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Apple</h2>
+
+        <div class="step">
+            <h3>1. Preparar el Archivo del Proyecto</h3>
+            <p>Sigue estos pasos para preparar y actualizar el archivo del proyecto:</p>
+            <ol>
+                <li>Comprime la carpeta <strong>src</strong> del proyecto en un archivo ZIP.</li>
+                <li>Sube el archivo ZIP a Google Drive.</li>
+                <li>Descarga el archivo ZIP desde Google Drive en la Mac.</li>
+                <li>Dentro de la carpeta de descarga de Efast, reemplaza todo el contenido de la carpeta <strong>src</strong> con el contenido del archivo ZIP descargado.</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>2. Construir la App en Visual Studio</h3>
+            <p>Abre la consola de Visual Studio y ejecuta el siguiente comando:</p>
+            <code>nvm use 14</code>
+            <p>Cambia la versión en los archivos <strong>config.xml</strong> y <strong>config.ts</strong> a la versión nueva correspondiente, y luego ejecuta:</p>
+            <code>ionic cordova build ios</code>
+        </div>
+
+        <div class="step">
+            <h3>3. Subir la App a Xcode</h3>
+            <p>Abre Xcode y sigue estos pasos para subir la aplicación:</p>
+            <ol>
+                <li>Verifica que esté seleccionado <strong>Any iOS Device</strong> en el destino de compilación.</li>
+                <li>Ve a <strong>Product</strong> en la barra de menú y haz clic en <strong>Archive</strong>.</li>
+                <li>Una vez que el archivo se haya generado, selecciona la versión que deseas subir.</li>
+                <li>Haz clic en <strong>Distribute App</strong>.</li>
+                <li>Selecciona <strong>App Store Connect</strong> como el método de distribución.</li>
+                <li>Haz clic en <strong>Distribute</strong> para continuar con el proceso.</li>
+                <li>Haz clic en <strong>Done</strong> para finalizar.</li>
+            </ol>
+        </div>
+
+        <div class="step">
+          <h3>4. Subir la App a App Store Connect</h3>
+          <p>Inicia sesión en <a href="https://appstoreconnect.apple.com/" target="_blank">App Store Connect</a>.</p>
+          <ol>
+              <li>Haz clic en el botón <strong>+</strong> en la sección de apps para iOS.</li>
+              <li>Agrega la versión de la app y haz clic en <strong>Crear</strong>.</li>
+              <li>Agrega la nota deseada en la sección de novedades de esta versión.</li>
+              <li>Haz clic en el botón <strong>+</strong> de compilación, selecciona la versión que subiste y haz clic en <strong>Aceptar</strong>.</li>
+              <li>Haz clic en <strong>Gestionar la versión</strong> y selecciona la opción <strong>Ninguno de los algoritmos mencionados anteriormente</strong>, luego haz clic en <strong>Guardar</strong>.</li>
+              <li>Haz clic en <strong>Guardar</strong> nuevamente.</li>
+              <li>Haz clic en <strong>Añadir a revisión</strong> y finalmente en <strong>Enviar a revisión de apps</strong>.</li>
+          </ol>
+      </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Guía de Publicación de Apps. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
