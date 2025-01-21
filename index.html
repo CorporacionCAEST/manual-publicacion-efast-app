@@ -88,6 +88,68 @@
         a:hover {
             text-decoration: underline;
         }
+        /* Media Queries para hacer el diseño responsivo */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header img {
+                width: 70px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            header h1 {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            .step {
+                padding: 10px;
+            }
+
+            .step h3 {
+                font-size: 18px;
+            }
+
+            .step p,
+            .step code {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 100px;
+            }
+
+            header h1 {
+                font-size: 18px;
+            }
+
+            .step {
+                padding: 8px;
+            }
+
+            .step h3 {
+                font-size: 16px;
+            }
+
+            .step p,
+            .step code {
+                font-size: 12px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -106,7 +168,7 @@
             <p>Ejecuta el siguiente comando para crear el archivo de release de la app:</p>
             <code>ionic cordova build android --release</code>
             <p>El archivo APK se generará en la siguiente ruta:</p>
-            <code>C:\Users\username\Documents\proyectos\app-EFAST\app\platforms\android\app\build\outputs\apk\release</code>
+            <code>C:\Users\UserName\Documents\proyectos\app-EFAST\app\platforms\android\app\build\outputs\apk\release</code>
         </div>
 
         <div class="step">
