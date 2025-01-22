@@ -169,7 +169,7 @@
 
         <div class="step">
             <h3>1. Crear el Release</h3>
-           <p>Antes de ejecutar el comando de creación del release, es necesario actualizar la versión de la aplicación en los siguientes archivos:</p>
+            <p>Antes de ejecutar el comando de creación del release, es necesario actualizar la versión de la aplicación en los siguientes archivos:</p>
             <ul>
                 <li>En el archivo <strong>config.xml</strong> de la ruta <code>app/config.xml</code></li>
                 <li>En el archivo <strong>config.ts</strong> de la ruta <code>app/src/config/config.ts</code></li>
@@ -190,11 +190,16 @@
             <h3>3. Subir la App a Google Play Store</h3>
             <p>Ingresa a la consola de Google Play Store: <a href="https://play.google.com/console/u/0/developers" target="_blank">Google Developer</a></p>
             <ol>
+              <li>Haz clic en  la app de <strong>E-Fast</strong> desde la lista de aplicaciones.</li>
                 <li>Haz clic en <strong>Probar y Publicar</strong>.</li>
                 <li>Selecciona <strong>Producción</strong>.</li>
                 <li>Haz clic en <strong>Crear nueva versión</strong>.</li>
-                <li>Arrastra o agrega la versión firmada del paso anterior.</li>
+                <li>Arrastra o agrega la versión  de la app firmada(Efast.apk) firmada del paso anterior.</li>
                 <li>Haz clic en <strong>Copiar notas de una versión anterior</strong>.</li>
+                  <ol>
+                    <li>Haz clic en la versión que quieres copiar las notas</li>
+                    <li>Haz clic en <strong>Copiar notas</strong>.</li>
+                  </ol>
                 <li>Haz clic en <strong>Siguiente</strong> y agrega un 100% de lanzamiento.</li>
                 <li>Haz clic en <strong>Guardar</strong>.</li>
                 <li>Haz clic en <strong>Resumen</strong> y luego en <strong>Enviar 1 cambio a revisión</strong>.</li>
@@ -258,6 +263,7 @@
                 <li>Una vez que el archivo se haya generado, selecciona la versión que deseas subir.</li>
                 <li>Haz clic en <strong>Distribute App</strong>.</li>
                 <li>Selecciona <strong>App Store Connect</strong> como el método de distribución.</li>
+                <li>Selecciona <strong>sing in</strong> e ingresa la contraseña y dar en aceptar.</li>
                 <li>Haz clic en <strong>Distribute</strong> para continuar con el proceso.</li>
                 <li>Haz clic en <strong>Done</strong> para finalizar.</li>
             </ol>
