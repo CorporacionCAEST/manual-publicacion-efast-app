@@ -169,7 +169,12 @@
 
         <div class="step">
             <h3>1. Crear el Release</h3>
-            <p>Ejecuta el siguiente comando para crear el archivo de release de la app:</p>
+           <p>Antes de ejecutar el comando de creación del release, es necesario actualizar la versión de la aplicación en los siguientes archivos:</p>
+            <ul>
+                <li>En el archivo <strong>config.xml</strong> de la ruta <code>app/config.xml</code></li>
+                <li>En el archivo <strong>config.ts</strong> de la ruta <code>app/src/config/config.ts</code></li>
+            </ul>
+            <p>Una vez que hayas actualizado la versión, ejecuta el siguiente comando para crear el archivo de release de la app:</p>
             <code>ionic cordova build android --release</code>
             <p>El archivo APK se generará en la siguiente ruta:</p>
             <code class="folderText">C:\Users\UserName\Documents\proyectos\app-EFAST\app\platforms\android\app\build\outputs\apk\release</code>
